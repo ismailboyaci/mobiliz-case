@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { AiOutlineCar, AiOutlineUser, AiOutlineTeam } from "react-icons/ai";
 
-function Header() {
+
+
+
+function Header(props) {
     const [show, setShow] = useState(false)
+  
   return (
     <nav className="navbar bg-custom-b1 h-20">
       <div className="row w-full">
@@ -42,7 +46,7 @@ function Header() {
             <button className="text-custom-w1 border-2 rounded flex px-2 mx-2 h-10 pt-1 hover:border-custom-r1">
               <AiOutlineUser className="text-custom-w1 text-xl" /> User Login{" "}
             </button>
-            <button className="text-custom-w1 border-2 rounded flex px-2 mx-2 h-10 pt-1 hover:border-custom-r1">
+            <button to="/adminlogin" className="text-custom-w1 border-2 rounded flex px-2 mx-2 h-10 pt-1 hover:border-custom-r1" onClick={props.click}>
               <AiOutlineTeam className="text-custom-w1 text-xl" /> Admin Login
             </button>
           </div>
